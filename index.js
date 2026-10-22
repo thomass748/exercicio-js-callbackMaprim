@@ -1,6 +1,4 @@
-// ==========================================
-// Exercício 1: Passagem por Referência (O Gatilho Desarmado) 🎯
-// ==========================================
+
 function saudacao() {
   console.log("Olá! Bem-vindo ao Back-End com Node.js!");
 }
@@ -16,8 +14,6 @@ executar(saudacao);
 
 
 // ==========================================
-// Exercício 2: Callback Recebendo Parâmetros de Dados 📊
-// ==========================================
 function calcularDobro(numero, callbackResultado) {
   const valorDobrado = numero * 2;
   callbackResultado(valorDobrado);
@@ -32,8 +28,6 @@ calcularDobro(25, imprimirFormatado);
 
 
 // ==========================================
-// Exercício 3: Flexibilidade — Mesma Mestra, Comportamentos Diferentes 🔄
-// ==========================================
 function operar(a, b, operacaoCallback) {
   return operacaoCallback(a, b);
 }
@@ -47,12 +41,11 @@ function multiplicar(x, y) {
 }
 
 console.log("\n--- Exercício 3 ---");
-console.log(operar(10, 4, somar));        // Imprime 14
-console.log(operar(10, 4, multiplicar));  // Imprime 40
+console.log(operar(10, 4, somar));      
+console.log(operar(10, 4, multiplicar));  
 
 
-// ==========================================
-// Exercício 4: Simplificando com Arrow Functions Inline ⚡
+
 // ==========================================
 function processarTexto(texto, callbackModificadora) {
   callbackModificadora(texto);
@@ -63,8 +56,6 @@ processarTexto("senai valinhos", (t) => console.log(t.toUpperCase()));
 
 
 // ==========================================
-// Exercício 5: Primeira Callback Assíncrona com setTimeout ⏳
-// ==========================================
 function simularDownload(nomeArquivo, callbackConclusao) {
   console.log(`Iniciando download de ${nomeArquivo}...`);
   setTimeout(() => {
@@ -74,5 +65,5 @@ function simularDownload(nomeArquivo, callbackConclusao) {
 
 console.log("\n--- Exercício 5 ---");
 simularDownload("dados_clientes.csv", () => {
-  console.log("✅ Download finalizado com sucesso no disco!");
+  console.log("Download finalizado com sucesso no disco!");
 });
